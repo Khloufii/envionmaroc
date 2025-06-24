@@ -20,112 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    // Navbar mobile
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinkItems = document.querySelectorAll('.nav-link');
+
     
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-    
-    // Fermer le menu quand un lien est cliqué
-    navLinkItems.forEach(item => {
-        item.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            
-            // Mettre à jour le lien actif
-            navLinkItems.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-    
-    // Changement de la navbar au scroll
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo h1');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            header.style.padding = '10px 0';
-            logo.style.fontSize = '24px';
-        } else {
-            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
-            header.style.padding = '20px 0';
-            logo.style.fontSize = '28px';
-        }
-    });
-    
-    // Modal (reste identique à la version précédente)
-    const modal = document.getElementById('offreModal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalImages = document.getElementById('modal-images');
-    const modalDescription = document.getElementById('modal-description');
-    const closeModal = document.querySelector('.close-modal');
-    
-    // Offres data (identique à la version précédente)
-    
-    document.querySelectorAll('.btn-offre').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const offreId = this.closest('.offre-card').getAttribute('data-offre');
-            const offre = offresData[offreId];
-            
-            modalTitle.textContent = offre.title;
-            modalImages.innerHTML = '';
-            
-            offre.images.forEach(imgSrc => {
-                const img = document.createElement('img');
-                img.src = imgSrc;
-                img.alt = offre.title;
-                modalImages.appendChild(img);
-            });
-            
-            modalDescription.innerHTML = offre.description;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-    
-    window.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-    
-    // Animation au scroll
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.offre-card, .section-title, .about-content');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    // Initialiser les éléments cachés
-    document.querySelectorAll('.offre-card, .section-title, .about-content').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Exécuter une première fois au chargement
-});
     
     // Modal functionality
     const modal = document.getElementById('offreModal');
@@ -303,4 +199,111 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScroll = currentScroll;
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar mobile
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinkItems = document.querySelectorAll('.nav-link');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand un lien est cliqué
+    navLinkItems.forEach(item => {
+        item.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            
+            // Mettre à jour le lien actif
+            navLinkItems.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    
+    // Changement de la navbar au scroll
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo h1');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            header.style.padding = '10px 0';
+            logo.style.fontSize = '24px';
+        } else {
+            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
+            header.style.padding = '20px 0';
+            logo.style.fontSize = '28px';
+        }
+    });
+    
+    // Modal (reste identique à la version précédente)
+    const modal = document.getElementById('offreModal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImages = document.getElementById('modal-images');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModal = document.querySelector('.close-modal');
+    
+    // Offres data (identique à la version précédente)
+    
+    document.querySelectorAll('.btn-offre').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const offreId = this.closest('.offre-card').getAttribute('data-offre');
+            const offre = offresData[offreId];
+            
+            modalTitle.textContent = offre.title;
+            modalImages.innerHTML = '';
+            
+            offre.images.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = offre.title;
+                modalImages.appendChild(img);
+            });
+            
+            modalDescription.innerHTML = offre.description;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Animation au scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.offre-card, .section-title, .about-content');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementPosition < windowHeight - 100) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Initialiser les éléments cachés
+    document.querySelectorAll('.offre-card, .section-title, .about-content').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Exécuter une première fois au chargement
 });

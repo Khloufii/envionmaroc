@@ -708,18 +708,11 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-    .section-title h2 {
-        font-size: 32px;
-    }
-}
-
 @media (max-width: 992px) {
-    .hamburger {
+     .hamburger {
         display: block;
     }
-    
-    .nav-links {
+     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
@@ -734,8 +727,8 @@ footer {
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
-    
-    .nav-links.active {
+
+      .nav-links.active {
         right: 0;
     }
     
@@ -743,20 +736,17 @@ footer {
         padding: 15px 0;
         font-size: 18px;
     }
-    
-    .nav-cta {
+      .nav-cta {
         margin: 30px 0 0;
     }
-    
-    .hamburger.active .bar:nth-child(1) {
+      .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
     
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
-    .hamburger.active .bar:nth-child(3) {
+      .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
     
@@ -767,11 +757,14 @@ footer {
     .modal-description ul {
         columns: 1;
     }
-}
-
-@media (max-width: 768px) {
-    .section-title h2 {
-        font-size: 28px;
+    
+    .about-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
     }
     
     .hero h2 {
@@ -781,31 +774,42 @@ footer {
     .hero p {
         font-size: 18px;
     }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
     
-    .offres-grid {
-        grid-template-columns: 1fr;
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    h2 {
+        font-size: 30px;
     }
     
     .modal-content {
         width: 95%;
-        padding: 30px 20px;
-    }
-    
-    .modal-images {
-        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 576px) {
     .hero h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
     
     .hero p {
         font-size: 16px;
     }
     
-    .btn {
-        padding: 12px 25px;
+    .offres-grid {
+        grid-template-columns: 1fr;
     }
 }
