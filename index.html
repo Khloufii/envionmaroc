@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnvionMaroc - Constructeur de Villas de Luxe au Maroc</title>
-    <meta name="description" content="EnvionMaroc est le spécialiste de la construction de villas de luxe au Maroc. Découvrez nos prestations haut de gamme pour des projets immobiliers d'exception.">
-    <meta name="keywords" content="villas de luxe Maroc, construction villa Casablanca, architecte villa Maroc, immobilier prestige Maroc, constructeur villa Marrakech, projet immobilier Maroc">
+    <title>EnvionMaroc - Constructeur de Villas de Luxe et Bâtiments Industriels</title>
+    <meta name="description" content="EnvionMaroc spécialiste en construction de villas de luxe et bâtiments industriels au Maroc. Expertise en projets immobiliers d'exception et constructions industrielles.">
+    <meta name="keywords" content="construction Maroc, villas luxe, bâtiments industriels, usines Maroc, entrepôts logistiques, construction clé en main">
     <meta name="author" content="EnvionMaroc">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
@@ -15,11 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-     <header>
+    <header>
         <div class="navbar-container">
             <div class="logo">
-                <h1>Envion<span>Maroc</span></h1>
-                <p>Créateur de villas d'exception</p>
+            
+               <img src="images/logoenvion.png" alt="EnvionMaroc" class="logoenvion">
+              
             </div>
             
             <nav class="navbar">
@@ -30,8 +31,6 @@
                     <li><a href="#apropos" class="nav-link">À Propos</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                
-               
                 
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -44,20 +43,40 @@
 
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h2>Villas de Luxe sur Mesure au Maroc</h2>
-            <p>Excellence architecturale et savoir-faire artisanal</p>
-            <a href="#offres" class="btn">Découvrir nos prestations</a>
+            <h2>Construction Haut de Gamme au Maroc</h2>
+            <p>Excellence architecturale et savoir-faire technique</p>
+           
+      
+
+         <section class="services-navigation">
+        <div class="container">
+            <div class="services-toggle">
+                <a href="#offres" class="service-option active" data-service="villas">
+                    <i class="fas fa-home"></i>
+                    <span>Villas de Luxe</span>
+                </a>
+                
+                <a href="#offres" class="service-option" data-service="industriel">
+                    <i class="fas fa-industry"></i>
+                    <span>Bâtiments Industriels</span>
+                </a>
+                
+            </div>
         </div>
     </section>
 
-   <section id="offres" class="offres-section">
+    </section>
+
+   
+
+    <section id="offres" class="offres-section">
         <div class="container">
             <h2>Nos Prestations Premium</h2>
-            <p class="section-description">Un accompagnement complet pour votre projet de villa d'exception</p>
+            <p class="section-description">Un accompagnement complet pour vos projets résidentiels et industriels</p>
             
             <div class="offres-grid">
-                <!-- Offre 1 -->
-                <div class="offre-card" data-offre="1">
+                <!-- Offres Villas de Luxe -->
+                <div class="offre-card" data-offre="1" data-service-type="villas">
                     <div class="offre-image">
                         <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Viabilisation complète">
                         <div class="offre-badge">Offre Complète</div>
@@ -82,8 +101,7 @@
                     </div>
                 </div>
 
-                <!-- Offre 2 -->
-                <div class="offre-card" data-offre="2">
+                <div class="offre-card" data-offre="2" data-service-type="villas">
                     <div class="offre-image">
                         <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Construction clé en main">
                         <div class="offre-badge">Solution Intégrale</div>
@@ -108,8 +126,7 @@
                     </div>
                 </div>
 
-                <!-- Offre 3 -->
-                <div class="offre-card" data-offre="3">
+                <div class="offre-card" data-offre="3" data-service-type="villas">
                     <div class="offre-image">
                         <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Construction villa">
                         <div class="offre-badge">Expertise</div>
@@ -134,8 +151,7 @@
                     </div>
                 </div>
 
-                <!-- Offre 4 -->
-                <div class="offre-card" data-offre="4">
+                <div class="offre-card" data-offre="4" data-service-type="villas">
                     <div class="offre-image">
                         <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Agencement luxe">
                         <div class="offre-badge">Élégance</div>
@@ -159,6 +175,85 @@
                         <button class="btn btn-offre">Voir détails <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
+
+                <!-- Offres Bâtiments Industriels -->
+                <div class="offre-card industriel" data-offre="5" data-service-type="industriel">
+                    <div class="offre-image">
+                        <img src="images/R.jpeg" alt="Construction d'usine">
+                        <div class="offre-badge badge-industriel">Industriel</div>
+                    </div>
+                    <div class="offre-content">
+                        <h3>Construction d'Usine</h3>
+                        <div class="offre-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conception sur mesure</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Normes industrielles</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Solutions logistiques</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-offre">Voir détails <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="offre-card industriel" data-offre="6" data-service-type="industriel">
+                    <div class="offre-image">
+                        <img src="images/louer-entrepots-logistiques.jpg" alt="Entrepôt logistique">
+                        <div class="offre-badge badge-industriel">Logistique</div>
+                    </div>
+                    <div class="offre-content">
+                        <h3>Entrepôts Logistiques</h3>
+                        <div class="offre-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conception modulaire</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Optimisation des flux</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Solutions de stockage</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-offre">Voir détails <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="offre-card industriel" data-offre="7" data-service-type="industriel">
+                    <div class="offre-image">
+                        <img src="images/VUE-01-6.jpg" alt="Bâtiment commercial">
+                        <div class="offre-badge badge-industriel">Commercial</div>
+                    </div>
+                    <div class="offre-content">
+                        <h3>Bâtiments Commerciaux</h3>
+                        <div class="offre-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Espaces modulables</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Normes d'accessibilité</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Design fonctionnel</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-offre">Voir détails <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                
+                </div>
             </div>
         </div>
     </section>
@@ -174,128 +269,135 @@
         </div>
     </div>
 
-    <section id="realisations" class="realisations-section">
+   <section id="realisations" class="realisations-section">
     <div class="container">
         <h2>Nos Réalisations</h2>
-        <p class="section-description">Découvrez quelques-unes de nos villas d'exception réalisées pour une clientèle exigeante</p>
+        <p class="section-description">Découvrez nos projets résidentiels et industriels réalisés avec excellence</p>
         
         <div class="realisations-grid">
-            <!-- Réalisation 1 -->
-            <div class="realisation-card">
+            <!-- Réalisations Villas de Luxe -->
+            <div class="realisation-card" data-service-type="villas">
                 <div class="realisation-image">
-                    <img src="images/pexels-heyho-7031406.jpg" alt="Villa Al Bahar">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Al Bahar" loading="lazy">
+                    <div class="realisation-badge">Résidentiel</div>
                 </div>
                 <div class="realisation-info">
                     <h3>Villa Al Bahar</h3>
-                    <p>Une villa contemporaine avec piscine à débordement et vue panoramique sur l'océan à Casablanca.</p>
+                    <p>Villa contemporaine de 450m² avec piscine à débordement et vue panoramique sur l'océan à Casablanca.</p>
                     <div class="realisation-details">
                         <span><i class="fas fa-ruler-combined"></i> 450 m²</span>
                         <span><i class="fas fa-bed"></i> 5 chambres</span>
                         <span><i class="fas fa-calendar-alt"></i> 2022</span>
                     </div>
+                    <a href="#" class="btn btn-realisation">Voir plus</a>
                 </div>
             </div>
 
-            <!-- Réalisation 2 -->
-            <div class="realisation-card">
+            <div class="realisation-card" data-service-type="villas">
                 <div class="realisation-image">
-                    <img src="images/pexels-heyho-6957083.jpg" alt="Villa Palmeraie">
+                    <img src="images/pexels-heyho-7031406.jpg" alt="Villa Palmeraie" loading="lazy">
+                    <div class="realisation-badge">Résidentiel</div>
                 </div>
                 <div class="realisation-info">
                     <h3>Villa Palmeraie</h3>
-                    <p>Résidence de luxe inspirée de l'architecture marocaine traditionnelle, nichée dans la palmeraie de Marrakech.</p>
+                    <p>Résidence de luxe de 620m² inspirée de l'architecture marocaine traditionnelle dans la palmeraie de Marrakech.</p>
                     <div class="realisation-details">
                         <span><i class="fas fa-ruler-combined"></i> 620 m²</span>
                         <span><i class="fas fa-bed"></i> 6 chambres</span>
                         <span><i class="fas fa-calendar-alt"></i> 2021</span>
                     </div>
+                    <a href="#" class="btn btn-realisation">Voir plus</a>
                 </div>
             </div>
 
-            <!-- Réalisation 3 -->
-            <div class="realisation-card">
+            <div class="realisation-card" data-service-type="villas">
                 <div class="realisation-image">
-                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Azur">
-                </div>
-                <div class="realisation-info">
-                    <h3>Villa Azur</h3>
-                    <p>Architecture minimaliste avec des lignes épurées et des matériaux nobles pour cette villa de prestige à Rabat.</p>
-                    <div class="realisation-details">
-                        <span><i class="fas fa-ruler-combined"></i> 380 m²</span>
-                        <span><i class="fas fa-bed"></i> 4 chambres</span>
-                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Réalisation 4 -->
-            <div class="realisation-card">
-                <div class="realisation-image">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Oasis">
-                </div>
-                <div class="realisation-info">
-                    <h3>Villa Oasis</h3>
-                    <p>Une propriété exceptionnelle avec jardin luxuriant et patios intérieurs, située à Agadir.</p>
-                    <div class="realisation-details">
-                        <span><i class="fas fa-ruler-combined"></i> 550 m²</span>
-                        <span><i class="fas fa-bed"></i> 5 chambres</span>
-                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Réalisation 5 -->
-            <div class="realisation-card">
-                <div class="realisation-image">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Atlas">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Atlas" loading="lazy">
+                    <div class="realisation-badge">Résidentiel</div>
                 </div>
                 <div class="realisation-info">
                     <h3>Villa Atlas</h3>
-                    <p>Inspiration montagnarde pour cette villa de charme avec vue sur les montagnes de l'Atlas à Oukaïmeden.</p>
+                    <p>Villa de charme de 480m² avec vue sur les montagnes de l'Atlas à Oukaïmeden, inspirée de l'architecture berbère.</p>
                     <div class="realisation-details">
                         <span><i class="fas fa-ruler-combined"></i> 480 m²</span>
                         <span><i class="fas fa-bed"></i> 5 chambres</span>
                         <span><i class="fas fa-calendar-alt"></i> 2021</span>
                     </div>
+                    <a href="#" class="btn btn-realisation">Voir plus</a>
                 </div>
             </div>
 
-            <!-- Réalisation 6 -->
-            <div class="realisation-card">
+            <!-- Réalisations Industrielles -->
+            <div class="realisation-card" data-service-type="industriel">
                 <div class="realisation-image">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Villa Zénith">
+                    <img src="images/R (4).jpeg" alt="Complexe Industriel" loading="lazy">
+                    <div class="realisation-badge badge-industriel">Industriel</div>
                 </div>
                 <div class="realisation-info">
-                    <h3>Villa Zénith</h3>
-                    <p>Design futuriste et technologies domotiques pour cette villa high-tech à Tanger.</p>
+                    <h3>Complexe Industriel</h3>
+                    <p>Plateforme logistique de 15 000 m² avec bureaux intégrés à Tanger Free Zone.</p>
                     <div class="realisation-details">
-                        <span><i class="fas fa-ruler-combined"></i> 520 m²</span>
-                        <span><i class="fas fa-bed"></i> 5 chambres</span>
+                        <span><i class="fas fa-ruler-combined"></i> 15 000 m²</span>
+                        <span><i class="fas fa-warehouse"></i> 3 halls</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                    </div>
+                    <a href="#" class="btn btn-realisation btn-industriel">Voir plus</a>
+                </div>
+            </div>
+
+            <div class="realisation-card" data-service-type="industriel">
+                <div class="realisation-image">
+                    <img src="images/OIP (5).webp" alt="Entrepôt Logistique" loading="lazy">
+                    <div class="realisation-badge badge-industriel">Industriel</div>
+                </div>
+                <div class="realisation-info">
+                    <h3>Entrepôt Logistique</h3>
+                    <p>Entrepôt de 8 000 m² avec système de stockage automatisé à Casablanca.</p>
+                    <div class="realisation-details">
+                        <span><i class="fas fa-ruler-combined"></i> 8 000 m²</span>
+                        <span><i class="fas fa-boxes"></i> 12 000 palettes</span>
                         <span><i class="fas fa-calendar-alt"></i> 2022</span>
                     </div>
+                    <a href="#" class="btn btn-realisation btn-industriel">Voir plus</a>
+                </div>
+            </div>
+
+            <div class="realisation-card" data-service-type="industriel">
+                <div class="realisation-image">
+                    <img src="images/OIP (6).webp" alt="Usine Agroalimentaire" loading="lazy">
+                    <div class="realisation-badge badge-industriel">Industriel</div>
+                </div>
+                <div class="realisation-info">
+                    <h3>Usine Agroalimentaire</h3>
+                    <p>Unité de production agroalimentaire de 6 500 m² conforme aux normes HACCP à Agadir.</p>
+                    <div class="realisation-details">
+                        <span><i class="fas fa-ruler-combined"></i> 6 500 m²</span>
+                        <span><i class="fas fa-industry"></i> 3 lignes</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                    </div>
+                    <a href="#" class="btn btn-realisation btn-industriel">Voir plus</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
     <section id="apropos" class="about-section">
         <div class="container">
             <h2>À Propos d'EnvionMaroc</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>EnvionMaroc est un acteur majeur dans la construction de villas de luxe au Maroc. Notre expertise couvre l'ensemble du processus de création, de la conception à la réalisation finale.</p>
+                    <p>EnvionMaroc est un acteur majeur dans la construction au Maroc, spécialisé dans les villas de luxe et les bâtiments industriels.</p>
                     <p>Nous combinons savoir-faire traditionnel et techniques modernes pour offrir des réalisations d'exception, adaptées aux exigences les plus élevées.</p>
                     <ul class="about-features">
                         <li><i class="fas fa-home"></i> Plus de 50 villas réalisées</li>
+                        <li><i class="fas fa-industry"></i> 20 projets industriels</li>
                         <li><i class="fas fa-award"></i> Expertise reconnue</li>
                         <li><i class="fas fa-users"></i> Équipe pluridisciplinaire</li>
-                        <li><i class="fas fa-lightbulb"></i> Solutions innovantes</li>
                     </ul>
                 </div>
                 <div class="about-image">
-                    <img src="images/favicon.png" alt="Villa de luxe EnvironMaroc">
+                    <img src="images/envionn.png" alt="Logo EnvionMaroc">
                 </div>
             </div>
         </div>
@@ -304,7 +406,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contactez-nous</h2>
-            <p>Prêt à concrétiser votre projet de villa de luxe ? Notre équipe est à votre écoute.</p>
+            <p>Prêt à concrétiser votre projet ? Notre équipe est à votre écoute.</p>
             
             <div class="contact-grid">
                 <div class="contact-info">
@@ -335,10 +437,14 @@
                     <div class="form-group">
                         <select>
                             <option value="">Sélectionnez une offre</option>
-                            <option value="1">Offre 1 - Viabilisation complète</option>
-                            <option value="2">Offre 2 - Construction clé en main</option>
-                            <option value="3">Offre 3 - Construction de villa</option>
-                            <option value="4">Offre 4 - Agencement sur mesure</option>
+                            <option value="1">Viabilisation complète</option>
+                            <option value="2">Construction clé en main</option>
+                            <option value="3">Construction de villa</option>
+                            <option value="4">Agencement sur mesure</option>
+                            <option value="5">Construction d'usine</option>
+                            <option value="6">Entrepôts logistiques</option>
+                            <option value="7">Bâtiments commerciaux</option>
+                            <option value="8">Chantiers navals</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -355,15 +461,15 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>EnvionMaroc</h3>
-                    <p>Excellence dans la construction de villas de luxe</p>
+                    <p>Excellence dans la construction résidentielle et industrielle</p>
                 </div>
                 <div class="footer-links">
                     <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#offres">Nos offres</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
                         <li><a href="#apropos">À propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-legal">

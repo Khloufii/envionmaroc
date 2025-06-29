@@ -43,7 +43,7 @@ a {
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 12px 25px;
     border-radius: 30px;
     font-weight: 600;
@@ -89,20 +89,15 @@ header {
 
 
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
+.logoenvion{
+    width: 250px;
+   
 }
 
-.logo h1 span {
-    color: var(--secondary-color);
-}
 
-.logo p {
-    font-size: 0.8rem;
-    color: #777;
-    margin-top: 5px;
-}
+
+
+
 
 .nav-links {
     display: flex;
@@ -124,7 +119,7 @@ header {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--primary-color);
+    color: forestgreen;
 }
 
 .nav-link::after {
@@ -185,6 +180,62 @@ header {
     font-size: 1.3rem;
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Services Navigation */
+.services-navigation {
+    padding: 30px 0;
+}
+
+.services-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.service-option i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: darkgreen;
+}
+
+.service-option span {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.service-option.active {
+    background-color: #01a224;
+}
+
+.service-option.active i,
+.service-option.active span {
+    color: white;
+}
+
+.service-option:hover:not(.active) {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajout pour cacher les offres industrielles par défaut */
+.offre-card.industriel {
+    display: none;
 }
 
 /* Offres Section */
@@ -699,6 +750,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .logoenvion{
+    width: 150px;
+    
+  
+}
     .hero h2 {
         font-size: 3rem;
     }
@@ -719,6 +775,7 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        margin-right: 20px;
     }
     
     .hamburger.active .bar:nth-child(2) {
@@ -753,6 +810,31 @@ footer {
     .nav-links li {
         margin: 15px 0;
     }
+
+    .services-toggle {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .service-option {
+        width: 80%;
+        max-width: 250px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+    
+    .service-option i {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    .service-option span {
+        font-size: 0.95rem;
+    }
+
     
     .hero h2 {
         font-size: 2.5rem;
@@ -783,4 +865,39 @@ footer {
     .modal-body {
         padding: 20px;
     }
+     .service-option {
+        width: 90%;
+    }
+}
+
+.offre-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-industriel {
+    background-color: var(--accent-color);
+}
+
+/* Styles différenciés pour les cartes industrielles */
+.offre-card[data-service-type="industriel"] .offre-content h3 {
+    color: var(--accent-color);
+}
+
+.offre-card[data-service-type="industriel"] .btn-offre {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.offre-card[data-service-type="industriel"] .btn-offre:hover {
+    background-color: var(--accent-color);
+    color: white;
 }
